@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 """
+dqn_agentのセグメント
 dqn_agent.py
 
 TicTacToe用のDQNエージェント
@@ -134,7 +135,7 @@ class DQNAgent(TicTacToeAgent):
         )
         self.target_net = copy.deepcopy(self.online_net)
 
-        #誤ってfpropとforwardで実装したため、以下で相互性を担保する
+        # forwardの別名としてfpropを定義（互換性のため）
         if not hasattr(self.online_net, "fprop"):
             self.online_net.fprop = self.online_net.forward
             self.target_net.fprop = self.target_net.forward
