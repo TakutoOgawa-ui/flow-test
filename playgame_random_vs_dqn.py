@@ -2,7 +2,6 @@
 
 
 """
-課題（DQN版）
 RandomAgent vs DQNAgent の対戦スクリプト
 
 要求：
@@ -331,8 +330,8 @@ def run_rule(
 # -------------------------
 if __name__ == "__main__":
     size = ask_board_size()
-    num_games = 30000
-    interval = 3000
+    num_games = 100_000
+    interval = 10_000
 
     print("=== Random vs DQN ===")
     print(f"size={size}, num_games={num_games}, interval={interval}")
